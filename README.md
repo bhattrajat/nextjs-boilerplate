@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a personalized [Next.js](https://nextjs.org/) starter kit for setting up common quality of life improvements on top of standard create-next-app installation easily.
+## Motivation
+I love Next.js and Tailwind and create-next-app also provides a really good way to setup tailwind with Next.js. But there are some things missing in the standard next.js installation which I used to setup on my every new Next.js project. 
 
+Generally my standard create-next-app steps goes like this
+- Select yes to add Typescript, EsLinst, Tailwind CSS, Src Directory, App router and customize default alias to @/*
+- Install [Prettier](https://prettier.io/) and [Tailwind Prettier Plugin](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier) Since the standard installation does not provide automatic class sorting for tailwind classes
+- The default Eslint config is not enough for me so I like to extend Eslint configuration using eslint:recommended and also add additional eslint plugins like typescript-eslint, react, react-hooks & typescript-sort-keys
+- Also I would like to add automatic import sorting plugin in prettier to sort all the imports alphabetically.
+- After watching this [great talk](https://www.youtube.com/watch?v=sSJBeWPIipQ&ab_channel=JSWORLDConference) by [JoshuaKGoldberg](https://github.com/JoshuaKGoldberg/linting-typescript-in-2023), I loved his idea of customizing error display for eslint errors to yellow/warn so we can easily differentiate between typescript error(red/error) and linting error(yellow/warn). So setup the same for vscode project using .vscode/settings.json on project level
+- Ask vscode to enable vscode to fix all the fixable linting errors on save. (Same in .vscode/settings.json)
+- Also even if you are using absolute imports and use vscode to auto import stuff It may use relative import if it is shorter/closer of the import. So Ask vscode to always prefer absolute/non-relative imports for typescript/tsx files.
+- 
+This things takes some time to setup so I decided to create a starter-kit to setup my next.js project using all this goodies with a single command
+  
 ## Getting Started
 
-First, run the development server:
+Install it by the following command. This uses pnpm:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpx create-next-app --use-pnpm -e "https://github.com/bhattrajat/nextjs-boilerplate/tree/main/"
+```
+
+```bash
+cd nextjs-boilerplate
+```
+Then run
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
