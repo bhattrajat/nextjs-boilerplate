@@ -10,7 +10,6 @@ Generally my standard create-next-app steps goes like this
 - After watching this [great talk](https://www.youtube.com/watch?v=sSJBeWPIipQ&ab_channel=JSWORLDConference) by [JoshuaKGoldberg](https://github.com/JoshuaKGoldberg/linting-typescript-in-2023), I loved his idea of customizing error display for eslint errors to yellow/warn so we can easily differentiate between typescript error(red/error) and linting error(yellow/warn). So setup the same for vscode project using .vscode/settings.json on project level
 - Ask vscode to enable vscode to fix all the fixable linting errors on save. (Same in .vscode/settings.json)
 - Also even if you are using absolute imports and use vscode to auto import stuff It may use relative import if it is shorter/closer of the import. So Ask vscode to always prefer absolute/non-relative imports for typescript/tsx files.
-- 
 This things takes some time to setup so I decided to create a starter-kit to setup my next.js project using all this goodies with a single command
   
 ## Getting Started
